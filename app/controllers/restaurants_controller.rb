@@ -3,10 +3,11 @@ class RestaurantsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    get_place
+
   end
 
   def show
+    get_place
   end
 
   def new
