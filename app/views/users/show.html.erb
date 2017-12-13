@@ -1,2 +1,12 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+
+
+<h1> Here are your saved restaurants </h1>
+
+<% @user.restaurants.all do |restaurant| %>
+<li> <%= restaurant.name %> </li>
+<li> <%= restaurant.address %> </li>
+<li> <%= restaurant.order %> </li>
+<li> <%= restaurant.review %> </li>
+<% end %>
