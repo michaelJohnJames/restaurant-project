@@ -1,10 +1,14 @@
 <h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+
+<h1>Welcome, User <%= current_user.id %>!  </h1>
+
+<h2> Where do you want to eat? </h1>
 
 
 
-<%#= form_with model: @restaurant, local: true, do |f| %>
-<%#= f.label "Radius" %><br>
-<%#= f.text_field :radius %>
-<%#= f.submit %>
-<%# end %>
+<button> <%= link_to 'Get some food', new_restaurant_path %> </button>
+
+
+<%= form_with model: @restaurant do |f| %>
+<%= f.submit %>
+<% end %>

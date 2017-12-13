@@ -76,6 +76,7 @@ GEM
     ffi (1.9.18)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    gmaps4rails (2.1.2)
     google_places (1.0.0)
       httparty (>= 0.13.1)
     http-cookie (1.0.3)
@@ -213,6 +214,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
+  gmaps4rails
   google_places
   jbuilder (~> 2.5)
   json

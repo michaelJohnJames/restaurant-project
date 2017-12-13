@@ -10,6 +10,7 @@ gem 'google_places'
 gem 'devise'
 gem 'rest-client'
 gem 'json'
+gem 'gmaps4rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

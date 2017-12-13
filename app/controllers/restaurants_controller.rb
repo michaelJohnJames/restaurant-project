@@ -4,14 +4,16 @@ class RestaurantsController < ApplicationController
 
   def index
 
+    @user = User.find_by_id(params[:id])
   end
 
   def show
-    get_place
+
   end
 
   def new
-
+    get_place
+    @user = current_user
 
   end
 
@@ -32,7 +34,8 @@ class RestaurantsController < ApplicationController
 
     @client = GooglePlaces::Client.new(ENV['GOOGLE_CLIENT_ID'])
     #@spot = @client.spots_by_query('food near Scranton, Pennsylvania')
-    @spot = @client.spots_by_query('Pizza near Philadelphia, Pennsylvania')
+    @spot = @client.spots_by_query('Food near Philadelphia, Pennsylvania')
+    @place = @spot[rand(@spot.count)]
     #url = @spot.photos[0].fetch_url(800)
     #@spot = @client.spot('Pizza near Miami')
 
@@ -40,6 +43,11 @@ class RestaurantsController < ApplicationController
 
      #pp @obj
     #parsed_json = ActiveSupport::JSON.decode(response)
+  end
+
+  def user_params
+    params.permit(:id)
+
   end
 
 
