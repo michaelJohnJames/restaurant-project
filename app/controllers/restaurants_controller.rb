@@ -30,7 +30,9 @@ class RestaurantsController < ApplicationController
     #uri =
 
     @client = GooglePlaces::Client.new(ENV['GOOGLE_CLIENT_ID'])
-    @spot = @client.spots_by_query('food near Scranton, Pennsylvania')
+    #@spot = @client.spots_by_query('food near Scranton, Pennsylvania')
+    @spot = @client.spots_by_query('Pizza near Philadelphia, Pennsylvania')
+    #url = @spot.photos[0].fetch_url(800)
     #@spot = @client.spot('Pizza near Miami')
 
     #@obj = JSON.parse(response)
