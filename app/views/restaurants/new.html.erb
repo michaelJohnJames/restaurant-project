@@ -3,12 +3,15 @@
 
 <h1> Your restaurant </h1>
 
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
+<iframe width="300" height="300" frameborder="0" style="border:0"
+ src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.formatted_address %>"
+ allowfullscreen>
+</iframe>
+<br>
+<br>
 
-<%= @place.name %>
-<%= @place.formatted_address %>
+<%= @place.name %><br>
+<%= @place.formatted_address %><br>
 <%= @place.url %>
 
 
