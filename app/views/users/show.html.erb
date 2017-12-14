@@ -5,10 +5,6 @@
 <h1> Here are your saved restaurants </h1>
 
 <% current_user.restaurants.each do |restaurant| %>
-<%= restaurant.id %> |
-<%= restaurant.name %> |
-<%= restaurant.address %> |
-<%= restaurant.order %> |
-<%= restaurant.review %> 
+<a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a> 
 <hr>
 <% end %>
