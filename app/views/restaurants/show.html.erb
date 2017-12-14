@@ -1,2 +1,12 @@
 <h1>Restaurants#show</h1>
 <p>Find me in app/views/restaurants/show.html.erb</p>
+
+<iframe width="600" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @restaurant.address %>" allowfullscreen="allowfullscreen"></iframe>
+
+
+
+<h1> <%= @restaurant.name %> </h1>
+<% if @restaurant.review != nil %>
+<p> My review: </p>
+<%= @restaurant.review %><br>
+<% end %>
