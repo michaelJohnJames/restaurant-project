@@ -4,10 +4,9 @@
 
 <h2> Where do you want to eat? </h2>
 
-<button>  <%= link_to 'Get some food', new_restaurant_path %></button>
 
 <%= form_with model: current_user do |f| %>
 <%= f.label :City %>:
 <%= f.text_field :location %><br>
-<%= f.submit %>
+<%= f.submit "Search for a restaurant" %>
 <% end %>

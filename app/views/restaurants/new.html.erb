@@ -2,7 +2,7 @@
 <p>Find me in app/views/restaurants/new.html.erb</p>
 
 <h1>
-  Your restaurant
+  Your restaurant in <%= @user.location %>!
 </h1>
 
 <iframe width="600" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.formatted_address %>" allowfullscreen="allowfullscreen"></iframe>
