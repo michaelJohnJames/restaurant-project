@@ -6,14 +6,12 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @restaurant = Restaurant.find_by_id(params[:id])
+    get_restaurant
   end
 
   def new
     get_place
-
     @restaurant = Restaurant.new
-
   end
 
   def create
@@ -28,20 +26,19 @@ class RestaurantsController < ApplicationController
   end
 
   def edit
-    @restaurant = Restaurant.find_by_id(params[:id])
-
+    get_restaurant
   end
 
   def update
+    get_restaurant
     @user = User.find_by_id(params[:id])
-    @restaurant = Restaurant.find_by_id(params[:id])
     @restaurant.update(restaurant_params)
-    redirect_to user_path(@user)
+    redirect_to user_path(current_user)
   end
 
 
   def destroy
-    @restaurant = Restaurant.find_by_id(params[:id])
+    get_restaurant
     @restaurant.destroy
     redirect_to user_path(current_user)
   end
@@ -52,6 +49,10 @@ class RestaurantsController < ApplicationController
     @client = GooglePlaces::Client.new(ENV['GOOGLE_CLIENT_ID'])
     @spot = @client.spots_by_query('Food near Philadelphia, Pennsylvania')
     @place = @spot[rand(@spot.count)]
+  end
+
+  def get_restaurant
+    @restaurant = Restaurant.find_by_id(params[:id])
   end
 
   def user_params

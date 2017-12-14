@@ -6,6 +6,8 @@
 
 <% current_user.restaurants.each do |restaurant| %>
 <a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a> |
-<%= link_to 'Delete restaurant', restaurant_path, method: :delete, data: {confirm: 'Are you sure you want to delete this restaurant?'} %>
+<%= link_to 'Delete restaurant', restaurant_path(restaurant), method: :delete, data: {confirm: 'Are you sure you want to delete this restaurant?'} %>
 <hr>
 <% end %>
+
+<%= link_to 'Pick a new restaurant', new_restaurant_path %>
