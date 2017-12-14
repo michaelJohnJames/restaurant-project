@@ -2,9 +2,10 @@
 <p>Find me in app/views/users/show.html.erb</p>
 
 
-<h1> Here are your saved restaurants </h1>
+<h1> Here are your saved restaurants: </h1>
 
 <% current_user.restaurants.each do |restaurant| %>
-<a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a> 
+<a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a> |
+<%= link_to 'Delete restaurant', restaurant_path, method: :delete, data: {confirm: 'Are you sure you want to delete this restaurant?'} %>
 <hr>
 <% end %>

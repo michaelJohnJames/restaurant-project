@@ -6,7 +6,17 @@
 
 
 <h1> <%= @restaurant.name %> </h1>
+<% if @restaurant.order != nil %>
+<p> What I ordered: </p>
+<%= @restaurant.order %>
+<% end %>
 <% if @restaurant.review != nil %>
 <p> My review: </p>
 <%= @restaurant.review %><br>
 <% end %>
+
+
+
+<%= link_to 'Log your experience', edit_restaurant_path %>
+<br>
+<%= link_to 'Back to your restaurant list', user_path(current_user) %>

@@ -28,9 +28,22 @@ class RestaurantsController < ApplicationController
   end
 
   def edit
+    @restaurant = Restaurant.find_by_id(params[:id])
+
   end
 
+  def update
+    @user = User.find_by_id(params[:id])
+    @restaurant = Restaurant.find_by_id(params[:id])
+    @restaurant.update(restaurant_params)
+    redirect_to user_path(@user)
+  end
+
+
   def destroy
+    @restaurant = Restaurant.find_by_id(params[:id])
+    @restaurant.destroy
+    redirect_to user_path(current_user)
   end
 
   private
