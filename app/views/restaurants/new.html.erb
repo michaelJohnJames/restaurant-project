@@ -1,25 +1,19 @@
 <h1>Restaurants#new</h1>
 <p>Find me in app/views/restaurants/new.html.erb</p>
 
-<h1> Your restaurant </h1>
+<h1>
+  Your restaurant
+</h1>
 
-<iframe width="300" height="300" frameborder="0" style="border:0"
- src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.formatted_address %>"
- allowfullscreen>
-</iframe>
+<iframe width="600" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.formatted_address %>" allowfullscreen="allowfullscreen"></iframe>
 <br>
-<br>
-
-<%= @place.name %><br>
-<%= @place.formatted_address %><br>
-<%= @place.url %>
-
-
 <br>
 <hr>
-<%#= url = @spot.first.icon %><br>
-<%#= @spot.first.name %><br>
-<%#= @spot.first.formatted_address %><br>
-<%#= @spot.first.rating %><br>
-<%#= @spot.first.types %><br>
-<%#= @spot.first.url %>
+
+<%= form_with model: Restaurant.new do |f| %>
+<%= f.text_field :name, :value => @place.name %><br>
+<%= f.text_field :address, :value => @place.formatted_address %><br>
+<%= f.submit "Save a restaurant" %>
+<% end %>
+<br>
+<hr>

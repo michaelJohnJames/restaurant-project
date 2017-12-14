@@ -1,14 +1,13 @@
 <h1>Restaurants#index</h1>
 
-<h1>Welcome, User <%= current_user.id %>!  </h1>
+<h1>Welcome, User <%= current_user.id %>!</h1>
 
-<h2> Where do you want to eat? </h1>
+<h2> Where do you want to eat? </h2>
 
-
-
-<button> <%= link_to 'Get some food', new_restaurant_path %> </button>
-
+<button>  <%= link_to 'Get some food', new_restaurant_path %> </button>
 
 <%= form_with model: @restaurant do |f| %>
+<%= f.label :location %>
+<%= f.text_field :location %>
 <%= f.submit %>
 <% end %>

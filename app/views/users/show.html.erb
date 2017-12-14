@@ -4,9 +4,11 @@
 
 <h1> Here are your saved restaurants </h1>
 
-<% @user.restaurants.all do |restaurant| %>
-<li> <%= restaurant.name %> </li>
-<li> <%= restaurant.address %> </li>
-<li> <%= restaurant.order %> </li>
-<li> <%= restaurant.review %> </li>
+<% current_user.restaurants.each do |restaurant| %>
+<%= restaurant.id %> |
+<%= restaurant.name %> |
+<%= restaurant.address %> |
+<%= restaurant.order %> |
+<%= restaurant.review %> 
+<hr>
 <% end %>

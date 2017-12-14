@@ -2,7 +2,6 @@ class RestaurantsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-
     @user = User.find_by_id(params[:id])
   end
 
@@ -12,12 +11,20 @@ class RestaurantsController < ApplicationController
 
   def new
     get_place
-    @user = current_user
+
+    @restaurant = Restaurant.new
 
   end
 
   def create
+    @restaurant = Restaurant.new(restaurant_params)
+    @restaurant.user_id = current_user.id
 
+      if @restaurant.save
+        redirect_to user_path(current_user)
+      else
+        redirect_to new_restaurant_path
+      end
   end
 
   def edit
@@ -36,7 +43,10 @@ class RestaurantsController < ApplicationController
 
   def user_params
     params.permit(:id)
+  end
 
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :review, :order, :user_id, :address)
   end
 
 
