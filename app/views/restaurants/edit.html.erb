@@ -6,10 +6,10 @@
 <%= form_with model: @restaurant do |f| %>
 <%= f.label :name %>:
 <%= f.text_field :name %><br>
-<%= f.label :review %>:
-<%= f.text_field :review %><br>
 <%= f.label :what_you_ordered %>:
 <%= f.text_field :order %><br>
+<%= f.label :review %>:
+<%= f.text_field :review %><br>
 <%= f.label :restaurant_address %>
 <%= f.text_field :address %><br>
 <%= f.submit "Update your review" %>
