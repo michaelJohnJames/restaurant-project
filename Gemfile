@@ -8,8 +8,6 @@ end
 #added gems
 gem 'google_places'
 gem 'devise'
-gem 'rest-client'
-gem 'json'
 gem 'gmaps4rails'
 gem 'pry'
 
