@@ -1,16 +1,25 @@
+<div class="wrapper-new">
+  <div class="one-new">
+    <h1> Your restaurant in <%= @user.location %>! </h1>
+  </div>
+  <div class="two-new">
+    <iframe width="600" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.formatted_address %>" allowfullscreen="allowfullscreen"></iframe>
+  </div>
 
-<h1>  Your restaurant in <%= @user.location %>! </h1>
+  <div class="three-new">
+    <%= form_with model: Restaurant.new do |f| %>
+    <%= f.text_field :name, :value => @place.name %><br>
+    <%= f.hidden_field :address, :value => @place.formatted_address %><br>
+    </div>
+    <div class="four-new">
+    <%= f.label :Rating %>
+    <%= f.text_field :rating, :value => @place.rating %>
+    </div>
 
-<iframe width="600" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.formatted_address %>" allowfullscreen="allowfullscreen"></iframe>
+  <div class="five-new">
+    <%= f.submit "Save restaurant", :class => 'save-rest-button' %>
+  <% end %>
+</div>
 <br>
-<br>
-<hr>
-
-<%= form_with model: Restaurant.new do |f| %>
-<%= f.text_field :name, :value => @place.name %><br>
-<%= f.text_field :address, :value => @place.formatted_address %><br>
-<%= f.submit "Save a restaurant" %>
-<% end %>
-<br>
-<%= link_to 'Pick a new restaurant', new_restaurant_path %>
-<hr>
+</div>
+</div>
