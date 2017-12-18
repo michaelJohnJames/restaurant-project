@@ -11,17 +11,17 @@
   <body>
     <nav>
     <% if !signed_in? %>
-    <%= link_to 'Log in', new_user_session_path %>
-    <%= link_to 'Sign up', new_user_registration_path %>
+    <%= link_to 'Log in', new_user_session_path, {id: "nav-log-in"} %>
+    <%= link_to 'Sign up', new_user_registration_path, {id: "nav-sign-up"} %>
 
     <% else %>
-    <%= link_to 'Change your location', root_path %> |
-    <%= link_to 'Your saved restaurants', user_path(current_user) %> |
-    <%= link_to 'Pick a new restaurant', new_restaurant_path %> |
-    <%= link_to 'Log out', destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} %>
+    <%= link_to 'Change location', root_path, {id: "nav-change-location"} %>
+    <%= link_to 'Saved restaurants', user_path(current_user), {id: "nav-save-rest"} %>
+    <%= link_to 'New restaurant', new_restaurant_path, {id: "nav-new-rest"} %>
+    <%= link_to 'Log out', destroy_user_session_path, method: :delete, id: "nav-log-out", data: {confirm: "Are you sure you want to log out?"} %>
     <% end %>
     </nav>
-  
+
     <%= yield %>
 
   </body>

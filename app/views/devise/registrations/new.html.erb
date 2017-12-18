@@ -2,11 +2,13 @@
 <%#= image_tag("background-large.jpeg") %>
 <div class="sign-up-page">
 <div class="sign-up">
-    <h2> What's for dinner? </h2>
+    <h2 class="logo-name"> What's for dinner? </h2>
   <h3>Sign up</h3>
+  <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%#= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :email %><br />

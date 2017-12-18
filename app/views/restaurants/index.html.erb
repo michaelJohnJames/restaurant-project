@@ -1,12 +1,21 @@
-<h1>Restaurants#index</h1>
 
-<h1>Welcome, User <%= current_user.id %>!</h1>
-
+<div class="wrapper-index">
+  <div class="nav"></div>
+<div class="one-index">
+</div>
+<div class="two-index">
 <h2> Where do you want to eat? </h2>
-
-
+</div>
+<div class="three-index">
 <%= form_with model: current_user do |f| %>
-<%= f.label :City %>:
+<%= f.label :City_or_Zip %> &nbsp; 
 <%= f.text_field :location %><br>
-<%= f.submit "Search for a restaurant" %>
+</div>
+<div class="four-index">
+<%= f.submit "Search" %>
 <% end %>
+</div>
+
+<div class="bottom-index"></div>
+
+</div>

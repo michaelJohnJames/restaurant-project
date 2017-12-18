@@ -14,6 +14,28 @@
  *= require_self
  */
 
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Roboto-Condensed');
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+
+* {
+  font-family: 'Roboto-Condensed', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.notice, .alert {
+font-size: 15px;
+}
+
+.logo-name {
+  font-size: 10px;
+}
+
+
+
 nav {
 background-color: #213D60;
 height: 60px;
@@ -73,7 +95,8 @@ color: #213D60;
 
 .log-in h2, .sign-up h2{
   text-align: center;
-  font-size: 48px;
+  font-size: 43px;
+  font-family: 'Carter One', cursive;
 }
 
 .sign-up input, .log-in input {
@@ -85,6 +108,93 @@ color: #213D60;
   font-size: 20px;
 }
 
-.sign-up, .log-in {
+#nav-log-out {
+  float: right;
+}
 
+.wrapper-index {
+  display: grid;
+  grid-template-rows: 40px 100px 150px 200px 50px 150px;
+  grid-template-columns: 1fr 6fr 1fr;
+  background-image: url("background-large.jpeg");
+
+}
+
+.one-index {
+  grid-row: 3/6;
+  grid-column: 2;
+  margin: 0;
+  background-color: #213D60;
+  border: 2px solid black;
+  border-radius: 8px;
+
+}
+
+.one-index h1{
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Carter One', cursive;
+
+}
+
+.two-index {
+  grid-row: 3;
+  grid-column: 2;
+  color: white;
+}
+
+.two-index h2 {
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Carter One', cursive;
+}
+
+.three-index {
+  grid-row: 4;
+  grid-column: 2;
+  margin: 0 auto;
+}
+
+.three-index input, .three-index label {
+  height: 75px;
+  font-size: 50px;
+  width: 400px;
+  color: black;
+  margin: 50px auto;
+}
+
+.three-index input {
+  height: 75px;
+  font-size: 50px;
+  width: 400px;
+  margin: 50px auto;
+}
+
+.three-index label {
+  height: 75px;
+  font-size: 50px;
+  width: 400px;
+  margin: 50px auto;
+  color: white;
+}
+
+.three-index input {
+  height: 75px;
+  font-size: 50px;
+  width: 400px;
+  margin: 50px auto;
+  margin-left: 10px;
+  padding-left: 15px;
+}
+
+.four-index {
+  grid-row: 5;
+  grid-column: 2;
+  margin: 0 auto;
+}
+
+.four-index input {
+  height: 100px;
+  width: 60px;
+  padding: 30px;
 }
