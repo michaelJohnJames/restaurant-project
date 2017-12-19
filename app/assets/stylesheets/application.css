@@ -435,9 +435,9 @@ color: #213D60;
 
 .wrapper-list {
   display: grid;
-  grid-template-rows: 0.5fr 1fr 10fr ;
+  grid-template-rows: 0.25fr 0.5fr 2fr;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 20px;
 
 }
 
@@ -460,13 +460,13 @@ color: #213D60;
 }
 
 .left-list {
-  grid-row: 1/4;
+  grid-row: 1/5;
   grid-column: 1;
   background-color: #EAEFF7;
 }
 
 .right-list {
-  grid-row: 1/4;
+  grid-row: 1/5;
   grid-column: 3;
   background-color: #EAEFF7;
 }
