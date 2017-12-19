@@ -1,16 +1,22 @@
-<h1>Restaurants#edit</h1>
-<p>Find me in app/views/restaurants/edit.html.erb</p>
 
-<h1> Add your restaurant review </h1>
-
+<div class="wrapper-edit">
+  <div class="background-edit"></div>
+  <div class="one-edit">
+<h1> Edit your review </h1>
+</div>
+<div class="two-edit">
 <%= form_with model: @restaurant do |f| %>
 <%= f.label :name %>:
 <%= f.text_field :name %><br>
 <%= f.label :what_you_ordered %>:
 <%= f.text_field :order %><br>
-<%= f.label :review %>:
-<%= f.text_field :review %><br>
+<%= f.label :review %>:<br>
+<%= f.text_area :review %><br>
 <%= f.label :restaurant_address %>
 <%= f.text_field :address %><br>
+
 <%= f.submit "Update your review" %>
+
 <% end %>
+
+</div>
