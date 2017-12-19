@@ -1,27 +1,31 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="wrapper-show">
+  <div class="background-show"></div>
+  <div class="one-show">
+<iframe width="590" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @restaurant.address %>" allowfullscreen="allowfullscreen"></iframe>
+</div>
 
-<iframe width="600" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @restaurant.address %>" allowfullscreen="allowfullscreen"></iframe>
-
-
-
+<div class="two-show">
 <h1> <%= @restaurant.name %> </h1>
+</div>
+<div class="three-show">
 <% if @restaurant.order != nil %>
-<p> What I ordered:
+<p> <strong> What I ordered: </strong>
 <%= @restaurant.order %> </p>
 <% end %>
 
 <% if @restaurant.review != nil %>
-<p> My review:
+<p><strong>My review:</strong>
 <%= @restaurant.review %></p><br>
 <% end %>
+</div>
 
-
+<div class="four-show">
 <% if @restaurant.review == nil %>
 <%= link_to 'Log your experience', edit_restaurant_path %>
 <% end %>
 <% if @restaurant.review != nil %>
 <%= link_to 'Edit your review', edit_restaurant_path %>
 <% end %>
-<br>
 <%= link_to 'Back to your restaurant list', user_path(current_user) %>
+</div>
+</div>
