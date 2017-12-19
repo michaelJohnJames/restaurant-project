@@ -118,7 +118,7 @@ color: #213D60;
 
 .wrapper-index {
   display: grid;
-  grid-template-rows: 50px 120px 150px 200px 50px 165px;
+  grid-template-rows: 50px 120px 125px 200px 50px 165px;
   grid-template-columns: 1fr 4fr 1fr;
   background-image: url("background-large.jpeg");
 
@@ -158,14 +158,6 @@ color: #213D60;
   margin: 0 auto;
 }
 
-.three-index input, .three-index label {
-  height: 75px;
-  font-size: 50px;
-  width: 400px;
-  color: black;
-  margin: 50px auto;
-}
-
 .three-index input {
   height: 75px;
   font-size: 50px;
@@ -202,14 +194,20 @@ color: #213D60;
   padding: 30px;
 }
 
+#restaurant-search {
+  width: 300px;
+  height: 40px;
+  background-color: white;
+}
+
 /* GRID FOR NEW RESTAURANT PAGE */
 
 
 .wrapper-new {
   display: grid;
-  grid-template-rows: 50px 125px 300px 50px 50px 50px 165px;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-gap: 15px;
+  grid-template-rows: 50px 125px 300px 50px 50px 70px 40px;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-gap: 5px;
   /*background-image: url("background-large.jpeg");*/
 }
 
@@ -269,7 +267,28 @@ color: #213D60;
   margin: 0 auto
 }
 
-.save-rest-button {
-  width: 400px;
-  height: auto;
+.left-new {
+  grid-row: 1/8;
+  grid-column: 1;
+  background-color: #B4C5E2;
+}
+
+.right-new {
+  grid-row: 1/8;
+  grid-column: 3;
+  background-color: #B4C5E2;
+}
+
+#save-rest-button {
+  width: 250px;
+  height: 50px;
+  background-color: #213D60;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#save-rest-button:hover {
+  cursor: pointer;
 }

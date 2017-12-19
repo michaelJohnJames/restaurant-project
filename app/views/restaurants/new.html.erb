@@ -1,9 +1,10 @@
 <div class="wrapper-new">
+  <div class="left-new"></div>
   <div class="one-new">
     <h1> Your restaurant in <%= @user.location %>! </h1>
   </div>
   <div class="two-new">
-    <iframe width="600" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.formatted_address %>" allowfullscreen="allowfullscreen"></iframe>
+    <iframe width="700" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.formatted_address %>" allowfullscreen="allowfullscreen"></iframe>
   </div>
 
   <div class="three-new">
@@ -12,14 +13,16 @@
     <%= f.hidden_field :address, :value => @place.formatted_address %><br>
     </div>
     <div class="four-new">
-    <%= f.label :Rating %>
+    <%= f.label :Google_Rating %>
     <%= f.text_field :rating, :value => @place.rating %>
     </div>
 
   <div class="five-new">
-    <%= f.submit "Save restaurant", :class => 'save-rest-button' %>
+    <%= f.submit "Save restaurant" %>
+    </div>
   <% end %>
-</div>
+
+<div class="right-new"></div>
 <br>
 </div>
 </div>
