@@ -9,13 +9,11 @@
 
   <div class="three-new">
     <%= form_with model: Restaurant.new do |f| %>
-    <%= f.text_field :name, :value => @place.name %><br>
+    <%= f.text_field :name, :readonly => true, :value => @place.name, id: "place-name" %> <br>
     <%= f.hidden_field :address, :value => @place.formatted_address %><br>
-    </div>
-    <div class="four-new">
-    <%= f.label :Google_Rating %>
-    <%= f.text_field :rating, :value => @place.rating %><br>
-    <%= f.submit "Save restaurant" %>
+    <%= f.label :Google_Rating, id: "google-rating" %>
+    <%= f.text_field :rating, :readonly => true, :value => @place.rating %><br><br>
+    <%= f.submit "Save restaurant", {id: "save-rest-button"} %>
 
   <% end %>
   </div>

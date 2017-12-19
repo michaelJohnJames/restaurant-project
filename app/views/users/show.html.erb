@@ -1,10 +1,18 @@
 
 
-
-<h1> Here are your saved restaurants: </h1>
-
-<% current_user.restaurants.each do |restaurant| %>
-<a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a> |
+<div class="wrapper-list">
+  <div class="left-list"></div>
+  <div class="right-list"></div>
+  <div class="one-list">
+<h1> Your saved restaurants </h1>
+</div>
+<div class="two-list">
+<% current_user.restaurants.reverse_each do |restaurant| %>
+<a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a> <br>
+<%= restaurant.address %> |
 <%= link_to 'Delete restaurant', restaurant_path(restaurant), method: :delete, data: {confirm: 'Are you sure you want to delete this restaurant?'} %>
 <hr>
+
 <% end %>
+</div>
+</div>

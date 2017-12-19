@@ -1,7 +1,8 @@
 <div class="wrapper-show">
   <div class="background-show"></div>
+  <div class="cover-background-show"></div>
   <div class="one-show">
-<iframe width="590" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @restaurant.address %>" allowfullscreen="allowfullscreen"></iframe>
+<iframe width="590" height="350" frameborder="0" style="border:1px solid black" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @restaurant.address %>" allowfullscreen="allowfullscreen"></iframe>
 </div>
 
 <div class="two-show">
