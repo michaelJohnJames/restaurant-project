@@ -490,7 +490,7 @@ new-rest-pic {
 
 .wrapper-list {
   display: grid;
-  grid-template-rows: 0.25fr 2fr 0.5fr;
+  grid-template-rows: 0.25fr 2fr 0.1fr;
   grid-template-columns: 1fr 5fr 1fr;
   grid-gap: 20px;
   background-image: url("background-large.jpeg");
