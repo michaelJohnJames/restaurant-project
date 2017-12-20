@@ -555,3 +555,24 @@ right-list {
 .one-new-password input[type=submit] {
   width: 200px;
 }
+
+/* MOBILE VIEWS */
+
+@media all and (max-width: 375px) {
+
+    .sign-up, .log-in {
+      background-color: #213D60;
+      width: 400px;
+      height: 520px;
+      border: 1.5px solid white;
+      border-radius: 5%;
+      margin: 200px auto;
+      padding: 20px;
+      position: relative;
+      color: white;
+      font-size: 20px;
+      box-shadow: 2px 2px black;
+    }
+
+
+  }
