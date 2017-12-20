@@ -1,5 +1,6 @@
 <div class="wrapper-new">
   <div class="left-new"></div>
+  <div class="new-box"></div>
   <div class="one-new">
     <h1> Your restaurant in <%= @user.location %>! </h1>
   </div>
@@ -13,8 +14,7 @@
     <%= f.hidden_field :address, :value => @place.formatted_address %><br>
     <%= f.label :Google_Rating, id: "google-rating" %>
     <%= f.text_field :rating, :readonly => true, :value => @place.rating %><br><br>
-    <%= f.submit "Save restaurant", {id: "save-rest-button"} %>
-
+    <%= f.submit "Save restaurant" %>
   <% end %>
   </div>
 <div class="right-new"></div>
