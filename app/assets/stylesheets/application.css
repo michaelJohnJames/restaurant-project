@@ -141,7 +141,6 @@ color: #213D60;
   text-align: center;
   font-size: 40px;
   font-family: 'Carter One', cursive;
-
 }
 
 .one-index input[type=submit] {
@@ -157,8 +156,18 @@ color: #213D60;
 .two-index h2 {
   text-align: center;
   font-size: 60px;
-  -webkit-text-stroke-width: 25px red;
   font-family: 'Carter One', cursive;
+  animation: begin 3s 1;
+}
+
+@keyframes begin {
+  0% {
+  color: #213D60;
+}
+
+  100% {
+  color: white;
+  }
 }
 
 .three-index {
@@ -215,7 +224,7 @@ color: #213D60;
 
 .wrapper-new {
   display: grid;
-  grid-template-rows: 70px 125px 300px 200px 45px;
+  grid-template-rows: 90px 125px 300px 200px 45px;
   grid-template-columns: 2fr 2fr 2fr;
   grid-gap: 15px;
   background-image: url("background-large.jpeg")
@@ -240,6 +249,7 @@ color: #213D60;
 
 .one-new h1 {
   padding-bottom: 25px;
+  font-size: 55px;
   font-family: 'Carter One', cursive;
 }
 
@@ -247,6 +257,7 @@ color: #213D60;
   grid-row: 3;
   grid-column: 2;
   margin: 0 auto;
+  display: inline-block;
   z-index: 9995;
 }
 
@@ -290,7 +301,15 @@ color: #213D60;
   border: 1px solid black;
   border-radius: 10px;
   margin-left: 375px;
+}
 
+.three-new input[type=submit]:hover {
+  cursor: pointer;
+}
+
+#new-rest-pic {
+  width: 200px;
+  height: 200px;
 }
 
 #google-rating {
@@ -313,10 +332,11 @@ left-new {
   background-color: #EAEFF7;
 }
 
-right-new {
-  grid-row: 1/8;
-  grid-column: 3;
+new-rest-pic {
+  grid-row: 4;
+  grid-column: 2;
   background-color: #EAEFF7;
+  z-index: 9999;
 }
 
 #save-rest-button {
@@ -329,11 +349,6 @@ right-new {
   border-radius: 10px;
   margin: 0 auto;
 }
-
-#save-rest-button:hover {
-  cursor: pointer;
-}
-
 
 /* GRID FOR RESTAURANT SHOW PAGE */
 .wrapper-show {
@@ -557,12 +572,12 @@ right-list {
 
 /* MOBILE VIEWS */
 
-@media all and (max-width: 375px) {
+@media all and (max-width: 425px) {
 
     .sign-up, .log-in {
-      background-color: #213D60;
-      width: 400px;
-      height: 520px;
+      background-color: red;
+      width: 800px;
+      height: 720px;
       border: 1.5px solid white;
       border-radius: 5%;
       margin: 200px auto;

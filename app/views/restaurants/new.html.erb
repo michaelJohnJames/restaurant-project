@@ -5,7 +5,8 @@
     <h1> Your restaurant in <%= @user.location %>! </h1>
   </div>
   <div class="two-new">
-    <iframe width="700" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.formatted_address %>" allowfullscreen="allowfullscreen"></iframe>
+    <iframe width="300" height="300" frameborder="0" style="border:1px solid black"" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.formatted_address %>" allowfullscreen="allowfullscreen"></iframe>
+    <%#= image_tag(@url, size: "200x200") %>
   </div>
 
   <div class="three-new">
@@ -16,8 +17,9 @@
     <%= f.text_field :rating, :readonly => true, :value => @place.rating %><br><br>
     <%= f.submit "Save restaurant" %>
   <% end %>
+
   </div>
-<div class="right-new"></div>
+<div class="new-rest-pic"></div>
 <br>
 </div>
 </div>
