@@ -945,6 +945,77 @@ right-list {
       margin: 0 auto;
     }
 
+    /* MOBILE VIEW GRID FOR RESTAURANT SHOW PAGE */
+    .wrapper-show {
+      display: grid;
+      grid-template-rows: 100px 250px 50px 130px 70px 75px;
+      grid-template-columns: 2fr 2fr 2fr;
+      grid-gap: 5px;
+      background-image: url("background-large.jpeg");
+
+    }
+
+    .background-show {
+      grid-row: 2/6;
+      grid-column: 2;
+      background-color: #213D60;
+      border: 1px solid black;
+      border-radius: 10px;
+      z-index: 9999;
+    }
+
+    .one-show {
+      grid-row: 2;
+      grid-column: 2;
+      margin: 0 auto;
+      z-index: 9999;
+    }
+
+    .two-show {
+      grid-row: 3;
+      grid-column: 2;
+      margin: 0 auto;
+      color: white;
+      z-index: 9999;
+    }
+
+    .two-show h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .three-show {
+      grid-row: 4;
+      grid-column: 2;
+      text-align: left;
+      padding-left: 20px;
+      padding-top: 10px;
+      color: white;
+      z-index: 9999;
+    }
+
+    .four-show {
+      grid-row: 5;
+      grid-column: 2;
+      margin: 0 auto;
+      color: white;
+      z-index: 9999;
+    }
+
+    .four-show a {
+      grid-row: 5;
+      grid-column: 2;
+      margin: 5px;
+      color: white;
+      z-index: 9999;
+    }
+
+    .cover-background-show {
+      height: 100%;
+    }
+
+
+
 
 
 }
