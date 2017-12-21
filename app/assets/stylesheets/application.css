@@ -590,6 +590,10 @@ right-list {
 
 @media all and (max-width: 480px) {
 
+  body {
+    overflow: scroll;
+  }
+
   .sign-up-page, .log-in-page {
     background-image: url("background-large.jpeg");
     background-position: center;
