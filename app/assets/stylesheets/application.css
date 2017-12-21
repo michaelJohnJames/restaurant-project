@@ -124,8 +124,15 @@ color: #213D60;
   display: grid;
   grid-template-rows: 50px 120px 140px 200px 50px 165px;
   grid-template-columns: 1fr 4fr 1fr;
-  background-image: url("background-large.jpeg");
 
+
+}
+
+.index {
+background-image: url("background-large.jpeg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 .one-index {
@@ -580,21 +587,62 @@ right-list {
 
 /* MOBILE VIEWS */
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 480px) {
 
-    .sign-up, .log-in {
-      background-color: red;
-      width: 1000px;
-      height: 800px;
+    .log-in, .sign-in {
+      background-color: #213D60;
+      width: 300px;
+      height: 475px;
       border: 1.5px solid white;
       border-radius: 5%;
-      margin: 200px auto;
+      margin: 100px auto;
       padding: 20px;
       position: relative;
       color: white;
-      font-size: 35px;
+      font-size: 15px;
       box-shadow: 2px 2px black;
     }
 
+    .log-in a {
+      color: white;
+      padding: 15px;
+    }
 
-  }
+    .log-in h2, .sign-up h2{
+      text-align: center;
+      font-size: 40px;
+      font-family: 'Carter One', cursive;
+    }
+
+    .sign-up input, .log-in input {
+      width: 300px;
+      height: 35px;
+      background-color: white;
+      color: black;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .log-in input[type=submit], .sign-up input[type=submit] {
+      width: 70px;
+      margin: 10px auto;
+    }
+
+    .logo-name {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+
+    .wrapper-index {
+
+      grid-template-columns: 0.5fr 6fr .5fr;
+      }
+
+    .two-index h2 {
+      font-size: 15px;
+    }
+
+
+
+}
