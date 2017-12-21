@@ -23,6 +23,7 @@
 
 body {
   margin: 0;
+  overflow: scroll;
 }
 
 .notice, .alert {
@@ -615,7 +616,7 @@ right-list {
     }
 
     .sign-up input, .log-in input {
-      width: 300px;
+      width: 290px;
       height: 35px;
       background-color: white;
       color: black;
