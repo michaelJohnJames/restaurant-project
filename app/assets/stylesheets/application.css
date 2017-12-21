@@ -590,7 +590,7 @@ right-list {
 
 @media all and (max-width: 480px) {
 
-  body {
+  * {
     overflow: scroll;
   }
 
