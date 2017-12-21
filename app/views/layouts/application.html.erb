@@ -11,6 +11,7 @@
 
   <body>
     <nav>
+    <div class="web">
     <% if !signed_in? %>
     <%= link_to 'Log in', new_user_session_path, {id: "nav-log-in"} %>
     <%= link_to 'Sign up', new_user_registration_path, {id: "nav-sign-up"} %>
@@ -21,6 +22,21 @@
     <%= link_to 'Saved restaurants', user_path(current_user), {id: "nav-save-rest"} %>
     <%= link_to 'Log out', destroy_user_session_path, method: :delete, id: "nav-log-out", data: {confirm: "Are you sure you want to log out?"} %>
     <% end %>
+    </div>
+
+    <div class="phone">
+      <% if !signed_in? %>
+      <%= link_to 'Log in', new_user_session_path, {id: "nav-log-in"} %>
+      <%= link_to 'Sign up', new_user_registration_path, {id: "nav-sign-up"} %>
+
+      <% else %>
+      <%= link_to 'Change location', root_path, {id: "nav-change-location"} %>
+      <%= link_to 'New restaurant', new_restaurant_path, {id: "nav-new-rest"} %>
+      <%= link_to 'Saved restaurants', user_path(current_user), {id: "nav-save-rest"} %>
+      <%= link_to 'Log out', destroy_user_session_path, method: :delete, id: "nav-log-out", data: {confirm: "Are you sure you want to log out?"} %>
+      <% end %>
+    </div>
+
     </nav>
 
     <%= yield %>
