@@ -26,7 +26,7 @@ body {
   overflow: scroll;
 }
 
-#footer {
+footer p {
   height: 20px;
   width: 100%;
   background-color: #213D60;
@@ -34,7 +34,7 @@ body {
   text-align: center;
   font-size: 15px;
   z-index: 9999;
-  margin-top: 0;
+  margin: 0;
 
 }
 
@@ -54,7 +54,7 @@ height: 60px;
 color: white;
 width: 100%;
 top: 0;
-position: fixed;
+position: static;
 z-index: 9999;
 }
 
@@ -85,7 +85,7 @@ color: #213D60;
   background-size: cover;
   height: 100%;
   width: 100%;
-  position: fixed;
+
 }
 
 .sign-up, .log-in {
@@ -94,7 +94,7 @@ color: #213D60;
   height: 520px;
   border: 1.5px solid white;
   border-radius: 5%;
-  margin: 100px auto;
+  margin: 0 auto;
   padding: 20px;
   position: relative;
   color: white;
@@ -144,6 +144,7 @@ background-image: url("background-large.jpeg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
+
 
 }
 
