@@ -645,10 +645,6 @@ right-list {
   display: inline-block;
   }
 
-  nav a:hover {
-  background-color: white;
-  color: #213D60;
-  }
 
   /* MOBILE SIGN-UP AND LOG-IN PAGE */
 
@@ -1082,6 +1078,50 @@ right-list {
       grid-row: 4;
       grid-column: 2;
       margin: 0 auto;
+    }
+
+    /* MOBILE NEW PASSWORD PAGE */
+
+    .wrapper-new-password {
+      display: grid;
+      grid-template-rows: 120px 400px 400px;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-gap: 5px;
+      background-image: url("background-large.jpeg");
+    }
+
+    .one-new-password {
+      grid-row: 2;
+      grid-column: 2;
+      margin: 0 auto;
+      width: 300px;
+      height: 250px;
+      padding: 20px;
+      border: 1px solid white;
+      border-radius: 10px;
+      color: white;
+      background-color: #213D60;
+      text-align: center;
+    }
+
+    .one-new-password h2 {
+      font-size: 30px;
+    }
+
+    .one-new-password input {
+      width: 200px;
+      height: 30px;
+      font-size: 15px;
+      background-color: white;
+    }
+
+    .one-new-password label {
+      margin-right: 20px;
+      font-size: 25px;
+    }
+
+    .one-new-password input[type=submit] {
+      width: 200px;
     }
 
 
