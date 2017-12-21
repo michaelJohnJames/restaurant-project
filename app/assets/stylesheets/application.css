@@ -54,7 +54,7 @@ height: 60px;
 color: white;
 width: 100%;
 top: 0;
-position: static;
+position: fixed;
 z-index: 9999;
 }
 
@@ -85,6 +85,8 @@ color: #213D60;
   background-size: cover;
   height: 100%;
   width: 100%;
+  position: fixed;
+  overflow: scroll;
 
 }
 
@@ -94,7 +96,7 @@ color: #213D60;
   height: 520px;
   border: 1.5px solid white;
   border-radius: 5%;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 20px;
   position: relative;
   color: white;
@@ -611,8 +613,7 @@ right-list {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 150%;
-    width: 100%;
+
   }
 
     .log-in, .sign-in {
