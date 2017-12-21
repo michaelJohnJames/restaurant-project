@@ -26,6 +26,18 @@ body {
   overflow: scroll;
 }
 
+#footer {
+  height: 20px;
+  width: 100%;
+  background-color: #213D60;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  z-index: 9999;
+  margin-top: 0;
+
+}
+
 .notice, .alert {
 font-size: 15px;
 }
@@ -125,8 +137,6 @@ color: #213D60;
   display: grid;
   grid-template-rows: 50px 120px 140px 200px 50px 165px;
   grid-template-columns: 1fr 4fr 1fr;
-
-
 }
 
 .index {
@@ -134,6 +144,7 @@ background-image: url("background-large.jpeg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
+
 }
 
 .one-index {
@@ -590,7 +601,7 @@ right-list {
 
 @media all and (max-width: 480px) {
 
-  * {
+  body {
     overflow: scroll;
   }
 
