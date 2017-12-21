@@ -4,17 +4,28 @@
   <div class="one-new">
     <h1> Your restaurant in <%= @user.location %>! </h1>
   </div>
+<% if @url != nil %>
   <div class="two-new">
-    <iframe width="300" height="300" frameborder="0" style="border:1px solid black"" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name %>, <%= @place.formatted_address %>" allowfullscreen="allowfullscreen"></iframe>
-    <%#= image_tag(@url, size: "200x200") %>
+    <div class="image-container">
+    <%= image_tag(@url, size: "300x300") %>
+    <iframe width="450" height="300" frameborder="0" style="border:1px solid black"" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name %>, <%= @place.formatted_address %>&zoom=18" allowfullscreen="allowfullscreen"></iframe>
+</div>
   </div>
+  <% end %>
+
+  <% if @url == nil %>
+    <div class="two-new">
+      <iframe width="800" height="300" frameborder="0" style="border:1px solid black"" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name %>, <%= @place.formatted_address %>&zoom=18" allowfullscreen="allowfullscreen"></iframe>
+    </div>
+    <% end %>
 
   <div class="three-new">
+
     <%= form_with model: Restaurant.new do |f| %>
     <%= f.text_field :name, :readonly => true, :value => @place.name, id: "place-name" %> <br>
     <%= f.hidden_field :address, :value => @place.formatted_address %><br>
-    <%= f.label :Google_Rating, id: "google-rating" %>
-    <%= f.text_field :rating, :readonly => true, :value => @place.rating %><br><br>
+    <%#= f.label :Google_Rating, id: "google-rating" %>
+    <%#= f.text_field :rating, :readonly => true, :value => @place.rating %>
     <%= f.submit "Save restaurant" %>
   <% end %>
 

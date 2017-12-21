@@ -307,6 +307,14 @@ color: #213D60;
   cursor: pointer;
 }
 
+.two-new img {
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+
 #new-rest-pic {
   width: 200px;
   height: 200px;
