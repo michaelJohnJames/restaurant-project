@@ -645,6 +645,10 @@ right-list {
   display: inline-block;
   }
 
+  nav a:hover {
+  background-color: #213D60;
+  color: white;
+  }
 
   /* MOBILE SIGN-UP AND LOG-IN PAGE */
 
