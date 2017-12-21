@@ -961,7 +961,7 @@ right-list {
       background-color: #213D60;
       border: 1px solid black;
       border-radius: 10px;
-      z-index: 9999;
+      z-index: 9995;
     }
 
     .one-show {
