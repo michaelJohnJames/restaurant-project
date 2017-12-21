@@ -723,7 +723,7 @@ right-list {
 
     .wrapper-index {
       display: grid;
-      grid-template-columns: 0.5fr 6fr .5fr;
+      grid-template-columns: 0.5fr 6fr 0.5fr;
       grid-template-rows: 50px 60px 175px 200px 50px 165px;
 
       }
@@ -800,6 +800,150 @@ right-list {
       background-color: #EAEFF7;
     }
 
+    /* MOBILE STYLES FOR NEW RESTAURANT PAGE */
+
+
+    .wrapper-new {
+      display: grid;
+      grid-template-rows: 90px 75px 300px 200px 45px;
+      grid-template-columns: 0.5fr 1fr 0.5fr;
+      grid-gap: 5px;
+
+    }
+
+    .new-box {
+      grid-row: 2/5;
+      grid-column: 2;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 10px;
+      z-index: 9995;
+    }
+
+    .one-new {
+      grid-row: 2;
+      grid-column: 2;
+      margin: 0 auto;
+      font-size: 25px;
+      z-index: 9995;
+    }
+
+    .one-new h1 {
+      padding-bottom: 10px;
+      font-size: 20px;
+      font-family: 'Carter One', cursive;
+      text-align: center;
+    }
+
+    .two-new {
+      grid-row: 3;
+      grid-column: 2;
+      margin: 0 auto;
+      display: inline-block;
+      z-index: 9995;
+    }
+
+    .three-new {
+      grid-row: 4;
+      grid-column: 2;
+      margin: 0 auto;
+      z-index: 9995;
+    }
+
+    #place-name {
+      width: 200px;
+      height: 50px;
+      font-size: 20px;
+      margin: 5px;
+      border: none;
+      text-align: center;
+    }
+
+    .four-new {
+      grid-row: 5;
+      grid-column: 2;
+      margin: 15px auto;
+      text-align: center;
+    }
+
+    .three-new input {
+      width: 50px;
+      font-size: 20px;
+      margin: 0 auto;
+      border: none;
+    }
+
+    .three-new input[type=submit] {
+      margin: 0 auto;
+      width: 200px;
+      height: 25px;
+      background-color: #213D60;
+      color: white;
+      font-size: 20px;
+      border: 1px solid black;
+      border-radius: 10px;
+      margin-left: 5px;
+    }
+
+    .three-new input[type=submit]:hover {
+      cursor: pointer;
+    }
+
+    .two-new img {
+      border: 1px solid black;
+      display: inline-block;
+      margin-right: 5px;
+      object-fit: cover;
+    }
+
+    .image-container {
+      width: 200px;
+      height: 200px;
+    }
+
+
+    #new-rest-pic {
+      width: 200px;
+      height: 200px;
+    }
+
+    #google-rating {
+      font-size: 20px;
+      margin-left: 400px;
+      margin-top: 10px;
+      margin-right: 5px;
+      margin-bottom: 10px;
+    }
+
+    .five-new {
+      grid-row: 6;
+      grid-column: 2;
+      margin: 0 auto
+    }
+
+    left-new {
+      grid-row: 1/8;
+      grid-column: 1;
+      background-color: #EAEFF7;
+    }
+
+    new-rest-pic {
+      grid-row: 4;
+      grid-column: 2;
+      background-color: #EAEFF7;
+      z-index: 9999;
+    }
+
+    #save-rest-button {
+      width: 100px;
+      height: 20px;
+      background-color: #213D60;
+      color: white;
+      font-size: 20px;
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 0 auto;
+    }
 
 
 

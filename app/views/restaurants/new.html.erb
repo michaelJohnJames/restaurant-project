@@ -4,6 +4,7 @@
   <div class="one-new">
     <h1> Your restaurant in <%= @user.location %>! </h1>
   </div>
+  <div class="web">
 <% if @url != nil %>
   <div class="two-new">
     <div class="image-container">
@@ -18,6 +19,25 @@
       <iframe width="800" height="300" frameborder="0" style="border:1px solid black"" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name %>, <%= @place.formatted_address %>&zoom=18" allowfullscreen="allowfullscreen"></iframe>
     </div>
     <% end %>
+    </div>
+
+    <div class="phone">
+  <% if @url != nil %>
+    <div class="two-new">
+      <div class="image-container">
+      <%= image_tag(@url, size: "100x100") %>
+      <iframe width="200" height="200" frameborder="0" style="border:1px solid black"" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name %>, <%= @place.formatted_address %>&zoom=18" allowfullscreen="allowfullscreen"></iframe>
+  </div>
+    </div>
+    <% end %>
+
+    <% if @url == nil %>
+      <div class="two-new">
+        <iframe width="200" height="200" frameborder="0" style="border:1px solid black"" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name %>, <%= @place.formatted_address %>&zoom=18" allowfullscreen="allowfullscreen"></iframe>
+      </div>
+      <% end %>
+      </div>
+
 
   <div class="three-new">
 
