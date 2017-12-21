@@ -73,7 +73,7 @@ color: #213D60;
   background-size: cover;
   height: 100%;
   width: 100%;
-
+  position: fixed;
 }
 
 .sign-up, .log-in {
@@ -589,6 +589,15 @@ right-list {
 /* MOBILE VIEWS */
 
 @media all and (max-width: 480px) {
+
+  .sign-up-page, .log-in-page {
+    background-image: url("background-large.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
 
     .log-in, .sign-in {
       background-color: #213D60;
