@@ -968,7 +968,7 @@ right-list {
       grid-row: 2;
       grid-column: 2;
       margin: 0 auto;
-      z-index: 9999;
+
     }
 
     .two-show {
@@ -976,7 +976,7 @@ right-list {
       grid-column: 2;
       margin: 0 auto;
       color: white;
-      z-index: 9999;
+
     }
 
     .two-show h1 {
@@ -991,7 +991,7 @@ right-list {
       padding-left: 20px;
       padding-top: 10px;
       color: white;
-      z-index: 9999;
+
     }
 
     .four-show {
@@ -999,7 +999,6 @@ right-list {
       grid-column: 2;
       margin: 0 auto;
       color: white;
-      z-index: 9999;
     }
 
     .four-show a {
@@ -1007,7 +1006,6 @@ right-list {
       grid-column: 2;
       margin: 5px;
       color: white;
-      z-index: 9999;
     }
 
     .cover-background-show {
