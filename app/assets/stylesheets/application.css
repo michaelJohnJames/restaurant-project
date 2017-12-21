@@ -580,19 +580,19 @@ right-list {
 
 /* MOBILE VIEWS */
 
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
 
     .sign-up, .log-in {
       background-color: red;
-      width: 800px;
-      height: 720px;
+      width: 1000px;
+      height: 800px;
       border: 1.5px solid white;
       border-radius: 5%;
       margin: 200px auto;
       padding: 20px;
       position: relative;
       color: white;
-      font-size: 20px;
+      font-size: 35px;
       box-shadow: 2px 2px black;
     }
 
