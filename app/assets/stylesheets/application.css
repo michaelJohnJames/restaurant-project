@@ -130,8 +130,8 @@ color: #213D60;
 }
 
 .log-in input[type=submit], .sign-up input[type=submit] {
-  width: 200px;
-  margin: 0 auto;
+  width: 90px;
+  margin: 10px auto;
   text-align: center;
 }
 
@@ -721,8 +721,9 @@ right-list {
     }
 
     .log-in input[type=submit], .sign-up input[type=submit] {
-      width: 90px;
+      width: 150px;
       margin: 10px auto;
+      text-align: center;
     }
 
     .logo-name {
