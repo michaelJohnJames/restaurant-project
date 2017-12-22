@@ -97,7 +97,7 @@ color: #213D60;
 
 .sign-up, .log-in {
   background-color: #213D60;
-  width: 450px;
+  width: 400px;
   height: 520px;
   border: 1.5px solid white;
   border-radius: 5%;
@@ -130,8 +130,9 @@ color: #213D60;
 }
 
 .log-in input[type=submit], .sign-up input[type=submit] {
-  width: 70px;
+  width: 100px;
   margin: 10px auto;
+  text-align: center;
 }
 
 #nav-log-out {
