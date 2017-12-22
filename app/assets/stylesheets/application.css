@@ -131,7 +131,7 @@ color: #213D60;
 
 .log-in input[type=submit], .sign-up input[type=submit] {
   width: 125px;
-  margin: 10px auto;
+  margin: 0 auto;
   text-align: center;
 }
 
