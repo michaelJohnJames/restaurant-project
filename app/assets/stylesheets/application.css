@@ -24,6 +24,7 @@
 body {
   margin: 0;
   overflow: scroll;
+  background-image: url("background-large.jpeg");
 }
 
 .phone {
@@ -253,7 +254,7 @@ background-size: cover;
   grid-template-rows: 90px 125px 300px 200px 45px;
   grid-template-columns: 2fr 2fr 2fr;
   grid-gap: 15px;
-  background-image: url("background-large.jpeg")
+  background-image: url("background-large.jpeg");
 }
 
 .new-box {
@@ -355,11 +356,6 @@ background-size: cover;
 }
 
 
-#new-rest-pic {
-  width: 200px;
-  height: 200px;
-}
-
 #google-rating {
   font-size: 20px;
   margin-left: 400px;
@@ -380,12 +376,7 @@ left-new {
   background-color: #EAEFF7;
 }
 
-new-rest-pic {
-  grid-row: 4;
-  grid-column: 2;
-  background-color: #EAEFF7;
-  z-index: 9999;
-}
+
 
 #save-rest-button {
   width: 250px;
@@ -542,6 +533,7 @@ new-rest-pic {
   grid-template-columns: 1fr 5fr 1fr;
   grid-gap: 20px;
   background-image: url("background-large.jpeg");
+
 }
 
 
@@ -779,10 +771,11 @@ right-list {
 
     .wrapper-list {
       display: grid;
-      grid-template-rows: 0.1fr 2fr 0.1fr;
+      grid-auto-rows: 100px max-content 500px;
       grid-template-columns: 1fr 2fr 1fr;
       grid-gap: 5px;
       background-image: url("background-large.jpeg");
+      height: 100%;
     }
 
 
@@ -821,12 +814,12 @@ right-list {
     /* MOBILE STYLES FOR NEW RESTAURANT PAGE */
 
 
-
     .wrapper-new {
       display: grid;
       grid-template-rows: 70px 115px 300px 100px 45px;
-      grid-template-columns: 2fr 1fr 2fr;
-      grid-gap: 5px;
+      grid-template-columns: 0.5fr 1fr 0.5fr;
+      grid-gap: 15px;
+      background-image: url("background-large.jpeg");
     }
 
     .new-box {
@@ -842,9 +835,8 @@ right-list {
     .one-new {
       grid-row: 2;
       grid-column: 2;
-      width: 300px;
-      font-size: 25px;
       z-index: 9995;
+      width: 300px;
     }
 
     .one-new h1 {
@@ -868,7 +860,7 @@ right-list {
       grid-row: 3;
       grid-column: 2;
       margin-left: 40px;
-      display: inline-block;
+      display: inline-table;
       z-index: 9995;
     }
 
