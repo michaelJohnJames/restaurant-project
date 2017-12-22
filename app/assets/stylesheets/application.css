@@ -530,9 +530,9 @@ left-new {
 
 .wrapper-list {
   display: grid;
-  grid-template-rows: 0.25fr 2fr 0.1fr;
+  grid-template-rows: 75px auto 500px;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 15px;
   background-image: url("background-large.jpeg");
 
 }
