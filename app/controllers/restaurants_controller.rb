@@ -48,11 +48,13 @@ class RestaurantsController < ApplicationController
   private
 
   def get_place
-    @client = GooglePlaces::Client.new(ENV['GOOGLE_CLIENT_ID'])
-    @spot = @client.spots_by_query("Food near #{@user.location}")
-    @place = @spot[rand(@spot.count)]
-    @url = @place.photos[0].fetch_url(800)
+    #@client = GooglePlaces::Client.new(ENV['GOOGLE_CLIENT_ID'])
+    #@spot = @client.spots_by_query("Food near #{@user.location}")
+    #@place = @spot[rand(@spot.count)]
 
+    @spot = ((GooglePlaces::Client.new(ENV['GOOGLE_CLIENT_ID'])).spots_by_query("Food near #{@user.location}"))
+    @place = @spot[rand(20)]
+    @url = @place.photos[0].fetch_url(800)
   end
 
   def get_restaurant
