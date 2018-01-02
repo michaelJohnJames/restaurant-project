@@ -185,17 +185,6 @@ background-size: cover;
   text-align: center;
   font-size: 60px;
   font-family: 'Carter One', cursive;
-  animation: begin 3s 1;
-}
-
-@keyframes begin {
-  0% {
-  color: #213D60;
-}
-
-  100% {
-  color: white;
-  }
 }
 
 .three-index {
