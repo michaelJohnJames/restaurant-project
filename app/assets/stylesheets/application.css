@@ -298,7 +298,6 @@ background-size: cover;
 }
 
 
-
 #place-name {
   width: 1000px;
   height: 50px;
@@ -812,14 +811,14 @@ right-list {
 
     .wrapper-new {
       display: grid;
-      grid-template-rows: 70px 115px 300px 70px 45px;
-      grid-auto-columns: 0.5fr 2fr 0.5fr;
+      grid-template-rows: 70px 115px 225px 70px 45px;
+      grid-template-columns: 0.5fr 2fr 0.5fr;
       grid-gap: 5px;
       background-image: url("background-large.jpeg");
     }
 
     .new-box {
-      grid-row: 2/5;
+      grid-row: 2/7;
       grid-column: 2;
       background-color: white;
       border: 2px solid black;
