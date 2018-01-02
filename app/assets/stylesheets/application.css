@@ -774,9 +774,11 @@ right-list {
       width: 100px;
       height: 25px;
       margin-left: 35%;
+      font-size: 15px;
       background-color: white;
       color: #213D60;
     }
+
 
     /* SAVED RESTAURANTS LIST */
 
@@ -1104,9 +1106,10 @@ right-list {
     }
 
     .two-edit input[type=submit] {
-      width: 140px;
+      width: 150px;
       background-color: white;
       margin: 15px 110px;
+      font-size: 15px;
     }
 
     .three-edit {
