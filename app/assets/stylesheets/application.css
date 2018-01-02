@@ -823,9 +823,9 @@ right-list {
 
     .wrapper-new {
       display: grid;
-      grid-template-rows: 70px 115px 300px 100px 45px;
-      grid-template-columns: 0.5fr 1fr 0.5fr;
-      grid-gap: 15px;
+      grid-template-rows: 70px 115px 300px 70px 45px;
+      grid-auto-columns: 0.5fr 2fr 0.5fr;
+      grid-gap: 5px;
       background-image: url("background-large.jpeg");
     }
 
@@ -833,7 +833,6 @@ right-list {
       grid-row: 2/5;
       grid-column: 2;
       background-color: white;
-      width: 360px;
       border: 2px solid black;
       border-radius: 10px;
       z-index: 9995;
@@ -864,7 +863,7 @@ right-list {
     .phone-new {
       grid-row: 3;
       grid-column: 2;
-      margin-left: 40px;
+      margin-left: 10px;
       display: inline-table;
       z-index: 9995;
     }
@@ -886,10 +885,10 @@ right-list {
     }
 
     #place-name {
-      width: 180px;
+      width: 150px;
       height: 30px;
       font-size: 10px;
-      margin-left: 125px;
+      margin-left: 130px;
       border: none;
       text-align: center;
       overflow: auto;
@@ -939,11 +938,14 @@ right-list {
 
 
     #google-rating {
-      font-size: 20px;
-      margin-left: 400px;
-      margin-top: 10px;
+      font-size: 10px;
+      margin-left: 150px;
       margin-right: 5px;
       margin-bottom: 10px;
+    }
+
+    #google-rating-number {
+      font-size: 10px;
     }
 
     .five-new {
