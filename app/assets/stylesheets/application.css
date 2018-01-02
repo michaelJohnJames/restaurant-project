@@ -846,7 +846,7 @@ right-list {
       font-size: 30px;
       font-family: 'Carter One', cursive;
       text-align: center;
-      margin-left: -100px;
+
 
     }
 
@@ -878,17 +878,18 @@ right-list {
     .three-new {
       grid-row: 3;
       grid-column: 2;
-      margin: 230px 160px;
+      margin: 230px auto;
       z-index: 9995;
     }
 
     #place-name {
-      width: 150px;
+      width: 180px;
       height: 30px;
-      font-size: 15px;
-      margin-left: 5px;
+      font-size: 10px;
+      margin-left: 125px;
       border: none;
       text-align: center;
+      overflow: auto;
     }
 
     .four-new {
@@ -914,7 +915,7 @@ right-list {
       font-size: 10px;
       border: 1px solid black;
       border-radius: 10px;
-      margin-left: 30px;
+      margin-left: 165px;
     }
 
     .three-new input[type=submit]:hover {
