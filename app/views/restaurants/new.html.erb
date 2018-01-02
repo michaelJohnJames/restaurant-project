@@ -26,7 +26,7 @@
   <% if @url != nil %>
     <div class="two-new">
       <div class="image-container">
-        <iframe width="275" height="200" style="border:1px solid black" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name.split().first %>, <%= @place.formatted_address %>&zoom=17" allowfullscreen="allowfullscreen"></iframe>
+        <iframe width="300" height="200" style="border:1px solid black" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name.split().first %>, <%= @place.formatted_address %>&zoom=17" allowfullscreen="allowfullscreen"></iframe>
         <br>
         <br>
         <%= image_tag(@url, size: "100x100") %>
@@ -46,7 +46,7 @@
 
     <%= form_with model: Restaurant.new do |f| %>
     <%= f.text_field :name, :readonly => true, :value => @place.name, id: "place-name" %> <br>
-    <%= f.hidden_field :address, :value => @place.formatted_address %><br>
+    <%= f.hidden_field :address, :value => @place.formatted_address %>
     <%= f.label :Google_Rating, class: "phone-new", id: "google-rating" %>
     <%= f.text_field :rating, :readonly => true, :value => @place.rating, class: "phone-new", id: "google-rating-number" %>
     <%= f.submit "Save restaurant" %>

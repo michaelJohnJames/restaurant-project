@@ -829,7 +829,7 @@ right-list {
 
     .wrapper-new {
       display: grid;
-      grid-template-rows: 70px 115px 225px 70px 45px 50px;
+      grid-template-rows: 70px 100px 210px 70px 45px 50px;
       grid-template-columns: 20px 325px 10px;
       grid-gap: 5px;
       background-image: url("background-large.jpeg");
@@ -853,7 +853,7 @@ right-list {
 
     .one-new h1 {
       padding-bottom: 10px;
-      font-size: 25px;
+      font-size: 30px;
       font-family: 'Carter One', cursive;
       text-align: center;
     }
@@ -893,7 +893,7 @@ right-list {
     #place-name {
       width: 150px;
       height: 30px;
-      font-size: 12px;
+      font-size: 15px;
       margin-left: 130px;
       border: none;
       text-align: center;
@@ -907,13 +907,6 @@ right-list {
       text-align: center;
     }
 
-    .three-new input {
-      width: 50px;
-      font-size: 20px;
-      margin: 0 auto;
-      border: none;
-    }
-
     .three-new input[type=submit] {
       margin: 0 auto;
       width: 100px;
@@ -923,7 +916,7 @@ right-list {
       font-size: 10px;
       border: 1px solid black;
       border-radius: 10px;
-      margin-left: 150px;
+      margin-left: 155px;
     }
 
     .three-new input[type=submit]:hover {
@@ -945,7 +938,7 @@ right-list {
 
     #google-rating {
       font-size: 10px;
-      margin-left: 150px;
+      margin-left: 160px;
       margin-right: 5px;
       margin-bottom: 10px;
     }
@@ -961,16 +954,7 @@ right-list {
     }
 
 
-    #save-rest-button {
-      width: 100px;
-      height: 20px;
-      background-color: #213D60;
-      color: white;
-      font-size: 20px;
-      border: 1px solid black;
-      border-radius: 10px;
-      margin: 0 auto;
-    }
+
 
     /* MOBILE VIEW GRID FOR RESTAURANT SHOW PAGE */
     .wrapper-show {
