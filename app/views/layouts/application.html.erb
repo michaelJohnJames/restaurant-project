@@ -4,6 +4,9 @@
     <title>What's for dinner?</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+
+
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -32,7 +35,7 @@
       <% else %>
       <%= link_to 'Change Area', root_path, {id: "nav-change-location"} %>
       <%= link_to 'New Place', new_restaurant_path, {id: "nav-new-rest"} %>
-      <%= link_to 'Saved Places', user_path(current_user), {id: "nav-save-rest"} %>
+      <%= link_to 'Saved', user_path(current_user), {id: "nav-save-rest"} %>
       <%= link_to 'Log out', destroy_user_session_path, method: :delete, id: "nav-log-out", data: {confirm: "Are you sure you want to log out?"} %>
       <% end %>
     </div>
