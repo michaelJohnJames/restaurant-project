@@ -1,5 +1,6 @@
 <div class="wrapper-new">
   <div class="left-new"></div>
+
   <div class="new-box"></div>
   <div class="one-new">
     <h1> Your restaurant in <%= @user.location %>! </h1>
@@ -9,14 +10,14 @@
   <div class="two-new">
     <div class="image-container">
     <%= image_tag(@url, size: "300x300") %>
-    <iframe width="450" height="300" frameborder="0" style="border:1px solid black" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name %>, <%= @place.formatted_address %>&zoom=18" allowfullscreen="allowfullscreen"></iframe>
+    <iframe width="450" height="300" frameborder="0" style="border:1px solid black" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name.split().first %>, <%= @place.formatted_address %>&zoom=18" allowfullscreen="allowfullscreen"></iframe>
 </div>
   </div>
   <% end %>
 
   <% if @url == nil %>
     <div class="two-new">
-      <iframe width="800" height="300" frameborder="0" style="border:1px solid black" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name %>, <%= @place.formatted_address %>&zoom=18" allowfullscreen="allowfullscreen"></iframe>
+      <iframe width="800" height="300" frameborder="0" style="border:1px solid black" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @place.name.split().first %>, <%= @place.formatted_address %>&zoom=18" allowfullscreen="allowfullscreen"></iframe>
     </div>
     <% end %>
     </div>
@@ -53,5 +54,6 @@
 
   </div>
 <br>
+  <div class="right-new"></div>
 </div>
 </div>

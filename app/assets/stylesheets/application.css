@@ -371,10 +371,15 @@ background-size: cover;
   margin: 0 auto
 }
 
-left-new {
+.left-new {
   grid-row: 1/8;
   grid-column: 1;
-  background-color: #EAEFF7;
+
+}
+
+.right-new {
+  grid-row: 1/8;
+  grid-column: 3;
 }
 
 
@@ -846,8 +851,6 @@ right-list {
       font-size: 30px;
       font-family: 'Carter One', cursive;
       text-align: center;
-
-
     }
 
     .two-new {
