@@ -377,7 +377,7 @@ background-size: cover;
 
 }
 
-.right-new {
+right-new {
   grid-row: 1/8;
   grid-column: 3;
 }
