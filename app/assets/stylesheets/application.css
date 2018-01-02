@@ -887,7 +887,7 @@ right-list {
     #place-name {
       width: 150px;
       height: 30px;
-      font-size: 10px;
+      font-size: 12px;
       margin-left: 130px;
       border: none;
       text-align: center;
@@ -917,7 +917,7 @@ right-list {
       font-size: 10px;
       border: 1px solid black;
       border-radius: 10px;
-      margin-left: 165px;
+      margin-left: 150px;
     }
 
     .three-new input[type=submit]:hover {
