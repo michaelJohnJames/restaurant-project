@@ -221,7 +221,13 @@ background-size: cover;
   height: 40px;
   margin-left: 200px;
   background-color: white;
+  font-size: 30px;
+  border-radius: 10px;
   color: #213D60;
+}
+
+.three-index input[type=submit]:hover {
+  cursor: pointer;
 }
 
 .four-index {
@@ -510,7 +516,17 @@ background-size: cover;
 }
 
 .two-edit input[type=submit] {
-  width: 175px;
+  width: 190px;
+  height: 30px;
+  margin-left: 200px;
+  background-color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  color: #213D60;
+}
+
+.two-edit input[type=submit]:hover {
+  cursor: pointer;
 }
 
 .three-edit {
