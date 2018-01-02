@@ -604,6 +604,46 @@ right-list {
 
 /* ----------- MOBILE VIEWS ------------*/
 
+@media all and (max-width: 1185px) {
+  .wrapper-index {
+    display: grid;
+    grid-template-columns: 0.5fr 6fr 0.5fr;
+    grid-template-rows: 50px 60px 175px 200px 50px 165px;
+
+    }
+  .one-index {
+    height: 400px;
+  }
+
+  .two-index h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .three-index label {
+    font-size: 25px;
+    margin-left: 100px;
+    margin-top: 10px;
+  }
+
+  .three-index input {
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  .three-index input[type=submit] {
+    width: 100px;
+    height: 25px;
+    margin-left: 35%;
+    font-size: 15px;
+    background-color: white;
+    color: #213D60;
+  }
+}
+
+
 @media all and (max-width: 480px) {
 
   body {
