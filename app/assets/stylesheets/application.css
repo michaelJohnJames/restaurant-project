@@ -926,7 +926,7 @@ right-list {
       grid-row: 5;
       grid-column: 2;
       margin: 15px auto;
-      text-align: left;
+      text-align: center;
     }
 
     .three-new input[type=submit] {
