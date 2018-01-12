@@ -31,18 +31,6 @@ body {
   display: none;
 }
 
-footer p {
-  height: 20px;
-  width: 100%;
-  background-color: #213D60;
-  color: white;
-  text-align: center;
-  font-size: 15px;
-  z-index: 9999;
-  margin: 0;
-
-}
-
 .notice, .alert {
 font-size: 15px;
 }
@@ -198,7 +186,8 @@ background-size: cover;
   height: 75px;
   font-size: 50px;
   width: 400px;
-  margin: 50px auto;
+  margin: 25px auto;
+  padding-left: 15px;
 }
 
 .three-index label {
@@ -209,13 +198,6 @@ background-size: cover;
   color: white;
 }
 
-.three-index input {
-  height: 75px;
-  font-size: 50px;
-  width: 400px;
-  margin: 25px auto;
-  padding-left: 15px;
-}
 
 .three-index input[type=submit] {
   width: 200px;
