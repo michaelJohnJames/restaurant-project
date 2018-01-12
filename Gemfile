@@ -9,7 +9,7 @@ end
 gem 'google_places'
 gem 'devise'
 gem 'gmaps4rails'
-gem 'pry'
+#gem 'pry'
 gem 'rails_12factor', group: :production
 
 
