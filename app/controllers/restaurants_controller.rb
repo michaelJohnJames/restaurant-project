@@ -2,12 +2,12 @@ class RestaurantsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @user = User.find_by_id(params[:id])
+    get_user
   end
 
   def show
     get_restaurant
-    @user = User.find_by_id(params[:id])
+    get_user
   end
 
   def new
@@ -33,7 +33,7 @@ class RestaurantsController < ApplicationController
 
   def update
     get_restaurant
-    @user = User.find_by_id(params[:id])
+    get_user
     @restaurant.update(restaurant_params)
     redirect_to user_path(current_user)
   end
@@ -55,6 +55,10 @@ class RestaurantsController < ApplicationController
 
   def get_restaurant
     @restaurant = Restaurant.find_by_id(params[:id])
+  end
+
+  def get_user
+    @user = User.find_by_id(params[:id])
   end
 
   def user_params
