@@ -47,6 +47,7 @@ class RestaurantsController < ApplicationController
 
   private
 
+# method to get restaurant from google places api
   def get_place
     @spot = ((GooglePlaces::Client.new(ENV['GOOGLE_CLIENT_ID'])).spots_by_query("Food near #{@user.location}"))
     @place = @spot[rand(20)]
