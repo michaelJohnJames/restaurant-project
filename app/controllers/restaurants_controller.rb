@@ -13,7 +13,6 @@ class RestaurantsController < ApplicationController
   def new
     @user = current_user
     get_place
-    #@restaurant = Restaurant.new
   end
 
   def create
