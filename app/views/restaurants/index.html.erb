@@ -1,22 +1,23 @@
 <!-- Page to enter location -->
 <div class="index">
-<div class="wrapper-index">
-  <div class="nav"></div>
-<div class="one-index">
-</div>
-<div class="two-index">
-<h2> Where do you want to eat? </h2>
-</div>
-<div class="three-index">
-<%= form_with model: current_user do |f| %>
-<%= f.label :City_or_Zip %> &nbsp;
-<%= f.text_field :location %><br>
-<%= f.submit "Search" %>
-<% end %>
-</div>
+  <div class="wrapper-index">
+    <div class="nav"></div>
+    <div class="one-index"></div>
+    <div class="two-index">
+      <h2>
+        Where do you want to eat?
+      </h2>
+    </div>
+    <div class="three-index">
+      <%= form_with model: current_user do |f| %>
+      <%= f.label :City_or_Zip %>
+      &nbsp;
+      <%= f.text_field :location %><br>
+      <%= f.submit "Search" %>
+    <% end %>
+  </div>
 
-
-<div class="bottom-index"></div>
+  <div class="bottom-index"></div>
 
 </div>
 </div>
