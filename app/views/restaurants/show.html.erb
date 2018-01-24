@@ -1,50 +1,70 @@
+<!-- Individual saved restaurant page -->
+
 <div class="wrapper-show">
   <div class="background-show"></div>
   <div class="cover-background-show"></div>
   <div class="one-show">
-  <div class="web">
-<iframe width="590" height="350" frameborder="0" style="border:1px solid black" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @restaurant.name.split().first %> + <%= @restaurant.address %>&zoom=18" allowfullscreen="allowfullscreen"></iframe>
-</div>
-<div class="phone">
-<iframe width="315" height="250" frameborder="0" style="border:1px solid black" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @restaurant.name.split().first %> + <%= @restaurant.address %>&zoom=18" allowfullscreen="allowfullscreen"></iframe>
-</div>
-</div>
+    <div class="web">
+      <iframe
+        width="590"
+        height="350"
+        frameborder="0"
+        style="border:1px solid black"
+        src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @restaurant.name.split().first %> + <%= @restaurant.address %>&zoom=18"
+        allowfullscreen="allowfullscreen"></iframe>
+    </div>
+    <div class="phone">
+      <iframe
+        width="315"
+        height="250"
+        frameborder="0"
+        style="border:1px solid black"
+        src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GOOGLE_MAPS_ID"] %>&q=<%= @restaurant.name.split().first %> + <%= @restaurant.address %>&zoom=18"
+        allowfullscreen="allowfullscreen"></iframe>
+    </div>
+  </div>
 
-<div class="two-show">
-<h1> <%= @restaurant.name %> </h1>
-</div>
-<div class="three-show">
-<% if @restaurant.order != nil %>
-<p> <strong> What I ordered: </strong>
-<%= @restaurant.order %> </p>
-<% end %>
+  <div class="two-show">
+    <h1>
+      <%= @restaurant.name %>
+    </h1>
+  </div>
+  <div class="three-show">
+    <% if @restaurant.order != nil %>
+      <p>
+        <strong>
+          What I ordered:
+        </strong>
+        <%= @restaurant.order %>
+      </p>
+    <% end %>
 
-<% if @restaurant.review != nil %>
-<p><strong>My review:</strong>
-<%= @restaurant.review %></p><br>
-<% end %>
-</div>
+    <% if @restaurant.review != nil %>
+      <p>
+        <strong>My review:</strong>
+        <%= @restaurant.review %></p><br>
+    <% end %>
+  </div>
 
-<div class="four-show">
-  <div class="web">
-<% if @restaurant.review == nil %>
-<%= link_to 'Log your experience', edit_restaurant_path %>
-<% end %>
-<% if @restaurant.review != nil %>
-<%= link_to 'Edit your review', edit_restaurant_path %>
-<% end %>
-<%= link_to 'Back to your restaurant list', user_path(current_user) %>
-</div>
-<div class="phone">
-<% if @restaurant.review == nil %>
-<%= link_to 'Log review', edit_restaurant_path %>
-<% end %>
-<% if @restaurant.review != nil %>
-<%= link_to 'Edit review', edit_restaurant_path %>
-<% end %>
-<%= link_to 'Back to restaurant list', user_path(current_user) %>
-</div>
+  <div class="four-show">
+    <div class="web">
+      <% if @restaurant.review == nil %>
+        <%= link_to 'Log your experience', edit_restaurant_path %>
+      <% end %>
+      <% if @restaurant.review != nil %>
+        <%= link_to 'Edit your review', edit_restaurant_path %>
+      <% end %>
+      <%= link_to 'Back to your restaurant list', user_path(current_user) %>
+    </div>
+    <div class="phone">
+      <% if @restaurant.review == nil %>
+        <%= link_to 'Log review', edit_restaurant_path %>
+      <% end %>
+      <% if @restaurant.review != nil %>
+        <%= link_to 'Edit review', edit_restaurant_path %>
+      <% end %>
+      <%= link_to 'Back to restaurant list', user_path(current_user) %>
+    </div>
 
-
-</div>
+  </div>
 </div>
